@@ -1,20 +1,65 @@
- const form = document.querySelector('.login-form');
 
-  form.addEventListener('submit', event => {
-    event.preventDefault();
+const form = document.querySelector(".login-form");
 
-    const formData = new FormData(form);
-    const data = {};
+form.addEventListener('submit', onFormSubmit);
 
-    for (let [name, value] of formData.entries()) {
-      if (!value) {
-        alert(`Please fill in all fields`);
-        return;
-      }
+function onFormSubmit(event) {
+  event.preventDefault();
 
-      data[name] = value;
-    }
+  const formData = new FormData(event.currentTarget);
 
-    console.log(data);
-    form.reset();
-  });
+  const userData = {
+    // email: "User",
+    // password: "Password",
+  };
+
+  const { elements: { email, password } } = event.currentTarget;
+
+  if (email.value === "" || password.value === "") {
+    alert(`Please fill in all the fields!`);
+    return;
+  }
+
+  // userData.email = email.value;
+  // userData.password = password.value;
+
+  // console.log(userData);
+
+  // event.currentTarget.reset();
+
+  formData.forEach((value, name) => userData[name] = value);
+
+  console.log(userData)
+
+   event.currentTarget.reset()
+}
+
+
+
+
+
+
+//  const form = document.querySelector('.login-form');
+
+//   form.addEventListener('submit', event => {
+//     event.preventDefault();
+
+//     const formData = new FormData(form);
+//     const data = {};
+
+//     for (let [name, value] of formData.entries()) {
+//       if (!value) {
+//         alert(`Please fill in all fields`);
+//         return;
+//       }
+
+//       data[name] = value;
+//     }
+
+//     console.log(data);
+//     form.reset();
+//   });
+
+
+
+
