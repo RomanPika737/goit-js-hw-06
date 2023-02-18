@@ -29,18 +29,18 @@ function destroyBoxes() {
   // refs.boxesContainer.remove();
 };
 
-function onClickCreatebutton(event) {
+function onClickCreateBoxes(event) {
   const nunber = refs.input.value;
   createBoxes(nunber);
 }
 
-refs.createButton.addEventListener('click', onClickCreatebutton);
+refs.createButton.addEventListener('click', onClickCreateBoxes);
 
-function onClickDestroyButton(event) {
+function onClickDestroyBoxes(event) {
   destroyBoxes();
 }
 
-refs.destroyButton.addEventListener('click', onClickDestroyButton);
+refs.destroyButton.addEventListener('click', onClickDestroyBoxes);
 
 
 
