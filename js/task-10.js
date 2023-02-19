@@ -14,7 +14,7 @@ const refs = {
 
 function createBoxes(nunber) {
   let size = 30;
-  for (let i = 0; i <= nunber; i += 1) {
+  for (let i = 1; i <= nunber; i += 1) {
     const box = document.createElement('div');
     box.style.width = size + 'px';
     box.style.height = size + 'px';
