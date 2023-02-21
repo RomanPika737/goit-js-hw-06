@@ -31,3 +31,21 @@ const createElements = ingredients => {
 
 const elements = createElements(ingredients);
 list.append(...elements);
+
+
+
+
+
+
+// const list = document.querySelector('#ingredients');
+
+// const result = ingredients.map(ingredient => {
+//   const li = document.createElement('li');
+//   li.textContent = ingredient;
+//   return li;
+// }).reduce((accumulator, currentElement) => {
+//   accumulator.append(currentElement);
+//   return accumulator;
+// });
+
+// list.append(result);

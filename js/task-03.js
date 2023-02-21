@@ -44,3 +44,20 @@ const makeGalleryItem = images
 gallery.insertAdjacentHTML('beforeend', makeGalleryItem);
 
 // console.log(makeGalleryItem);
+
+
+
+
+
+// const gallery = document.body.querySelector('.gallery');
+
+// images.forEach(({ url, alt }) => {
+//   const li = document.createElement("li");
+//   li.classList.add("gallery_item")
+//   const image = document.createElement('img');
+//   image.src = url;
+//   image.alt = alt;
+//   image.classList.add("gallery_img");
+//   li.append(image);
+//   gallery.append(li);
+// });
